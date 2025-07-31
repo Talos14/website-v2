@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Under Maintenance</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <style>
+        /* * Neubrutalist & Terminal Style Sheet
+         * Font: VT323 for a retro terminal look.
+         * Colors: Uses the requested background color with high-contrast elements.
+         * Elements: Features hard shadows, thick borders, and no rounded corners.
+        */
+
+        :root {
+            --bg-color: #bfd6ec;
+            --main-bg: #ffffff;
+            --text-color: #000000;
+            --border-color: #000000;
+            --shadow-color: #000000;
+            --accent-color: #0055ff;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            font-family: 'VT323', monospace;
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 1rem;
+            box-sizing: border-box;
+        }
+
+        /* The main window container */
+        .terminal-window {
+            width: 100%;
+            max-width: 650px;
+            background-color: var(--main-bg);
+            border: 3px solid var(--border-color);
+            box-shadow: 8px 8px 0px var(--shadow-color);
+            transition: box-shadow 0.2s ease-in-out;
+        }
+
+        .terminal-window:hover {
+            box-shadow: 10px 10px 0px var(--shadow-color);
+        }
+
+        /* The title bar of the window */
+        .title-bar {
+            background-color: #2e19ff;
+            color: var(--main-bg);
+            padding: 0.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.2rem;
+        }
+
+        .title-bar-text {
+            padding-left: 0.5rem;
+        }
+
+        /* Fake window controls */
+        .window-controls {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .control {
+            width: 18px;
+            height: 18px;
+            border: 2px solid var(--main-bg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* The main content area */
+        .content {
+            padding: 2rem;
+            font-size: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .content p {
+            margin: 0;
+        }
+
+        /* Styling for the mailto link */
+        .email-link {
+            color: var(--accent-color);
+            text-decoration: underline;
+            font-weight: bold;
+        }
+
+        .email-link:hover {
+            background-color: var(--accent-color);
+            color: var(--main-bg);
+            text-decoration: none;
+        }
+
+        /* Blinking cursor effect */
+        .cursor {
+            display: inline-block;
+            width: 10px;
+            height: 1.5rem;
+            background-color: var(--text-color);
+            animation: blink 1s steps(2) infinite;
+            margin-left: 5px;
+            vertical-align: middle;
+        }
+
+        @keyframes blink {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="terminal-window">
+    <div class="title-bar">
+        <span class="title-bar-text">PROJECT_MINING.EXE</span>
+        <div class="window-controls">
+            <div class="control">_</div>
+            <div class="control">[]</div>
+            <div class="control"><a href="index.html#projects" style="color: inherit; text-decoration: none;">X</a></div>
+        </div>
+    </div>
+    <div class="content">
+        <p>
+            Sorry, the content that you intend to see is currently being maintained, repaired or modified.
+            <br><br>
+            Please drop in a message with:
+            <a href="mailto:work.arghya03@gmail.com" class="email-link">work.arghya03@gmail.com</a>
+            for any queries regarding this.
+            <br><br>
+            I apologise for the inconvenience caused, if any and i am trying to repair this page back to working condition as soon as possible.
+            <span class="cursor"></span>
+        </p>
+    </div>
+</div>
+
+</body>
+</html>
